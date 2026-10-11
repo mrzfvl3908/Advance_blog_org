@@ -4,7 +4,7 @@ FROM python:3.13
 # Create the app directory
 RUN mkdir /app
 
-# Set the working directory inside the container
+# Set the working directory inside the container مشخص کردن محل انجام عملیات ها از ابتدا
 WORKDIR /app
 
 # Set environment variables
@@ -25,7 +25,7 @@ RUN pip3 install --no-cache-dir -r requirements.txt
 # Copy the Django project to the container
 COPY . /app/
 
-# Expose the Django port
+# Expose the Django port دسترسی برای کانتینرهای داخلی
 EXPOSE 8000
 
 # Run Django’s development server

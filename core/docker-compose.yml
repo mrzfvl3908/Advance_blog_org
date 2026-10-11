@@ -8,7 +8,7 @@ services:
     volumes:
       - .:/app
     ports:
-      - "8000:8000"
+      - "8000:8000" #=> در expose دسترسی‌ها برای کانتینرهای داخلی باز می‌شوند اما در ports علاوه بر کانتینر برای host نیز در برگرفته می‌شود
     environment:
       SECRET_KEY: "test"
       DEBUG: "True"
