@@ -1,5 +1,5 @@
-from django.contrib.auth.models import User
 from django.db import models
+from accounts_app.models import User
 
 
 class Category(models.Model):
@@ -23,7 +23,7 @@ class Post(models.Model):
     """
     model blog
     """
-    category = models.ForeignKey('Category', on_delete=models.SET_NULL, blank=True, related_name='posts')
+    category = models.ForeignKey('Category', on_delete=models.SET_NULL, null=True, related_name='posts')
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
     content = models.TextField()

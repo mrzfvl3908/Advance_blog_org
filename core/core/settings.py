@@ -134,3 +134,6 @@ MAILERS = {
         'BACKEND': 'django.core.mail.backends.console.EmailBackend',
     },
 }
+
+# user manager config
+AUTH_USER_MODEL = 'accounts_app.User'
