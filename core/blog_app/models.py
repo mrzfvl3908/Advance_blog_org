@@ -3,6 +3,9 @@ from django.db import models
 
 
 class Category(models.Model):
+    """
+    Category model
+    """
     name = models.CharField(max_length=200)
     created_date = models.DateTimeField(auto_now_add=True)
     updated_date = models.DateTimeField(auto_now=True)
@@ -17,6 +20,9 @@ class Category(models.Model):
 
 
 class Post(models.Model):
+    """
+    model blog
+    """
     category = models.ForeignKey('Category', on_delete=models.SET_NULL, blank=True, related_name='posts')
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
