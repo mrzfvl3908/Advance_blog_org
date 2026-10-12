@@ -49,3 +49,16 @@ class User(AbstractBaseUser, PermissionsMixin): #=>این کار لازم نیس
 
     def __str__(self):
         return self.email
+
+
+class Profile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='profile')
+    first_name = models.CharField(max_length=255)
+    last_name = models.CharField(max_length=255)
+    bio = models.TextField(blank=True, null=True)
+    image = models.ImageField(upload_to='profile_pics/', blank=True, null=True)
+    created_date = models.DateTimeField(auto_now_add=True)
+    updated_date = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.user.email
