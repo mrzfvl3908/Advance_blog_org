@@ -23,6 +23,7 @@ from core import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('home_app.urls')),
+    path('blog/', include('blog_app.urls')),
 ]
 
 #serving static and media for development
