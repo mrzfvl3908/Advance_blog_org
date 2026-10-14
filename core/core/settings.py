@@ -69,6 +69,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'blog_app.context_processors.blog_sidebar',
             ],
         },
     },
@@ -127,7 +128,6 @@ STATICFILES_DIRS = [BASE_DIR / 'staticfiles']
 MEDIA_URL = '/media/'
 
 MEDIA_ROOT = BASE_DIR / 'media'
-
 
 # login manager
 LOGIN_URL = "/accounts/login/"

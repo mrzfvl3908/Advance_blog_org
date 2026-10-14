@@ -1,11 +1,20 @@
-from django.shortcuts import render
-from django.views.generic import TemplateView
+from django.views.generic import ListView
 from blog_app.models import Post
 
 
-class IndexView(TemplateView):
+class IndexView(ListView):
+    model = Post
     template_name = 'home_app/index.html'
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['posts'] = Post.objects.filter(status=True)[:6]
-        return context
+    context_object_name = 'posts'
+
+    def get_queryset(self):
+        return Post.objects.filter(
+            status=True,
+            published_date__isnull=False,
+        ).select_related(
+            'category',
+            'author',
+        ).order_by(
+            '-published_date',
+            '-created_date',
+        )[:6]
