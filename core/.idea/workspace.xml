@@ -5,13 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f24587ca-520f-4b20-80de-64a7594b8ff2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/blog_app/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog_app/templates/blog_app/post_confirm_delete.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog_app/templates/blog_app/post_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts_app/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts_app/templates/registration/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts_app/templates/registration/register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts_app/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog_app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog_app/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog_app/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog_app/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog_app/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts_app/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +22,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Dockerfile" />
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -62,7 +62,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "django.template.preview.state": "SHOW_EDITOR",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "D:/DjangoProject/Advance_blog_org/core/blog_app/templates/blog_app",
+    "last_opened_file_path": "D:/DjangoProject/Advance_blog_org/core/accounts_app",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -73,6 +73,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\DjangoProject\Advance_blog_org\core\accounts_app" />
       <recent name="D:\DjangoProject\Advance_blog_org\core\blog_app\templates\blog_app" />
       <recent name="D:\DjangoProject\Advance_blog_org\core\blog_app" />
       <recent name="D:\DjangoProject\Advance_blog_org\core\staticfiles" />
@@ -133,7 +134,7 @@
       <workItem from="1791958371287" duration="8052000" />
       <workItem from="1791977787685" duration="225000" />
       <workItem from="1792474301764" duration="1461000" />
-      <workItem from="1792563635323" duration="3096000" />
+      <workItem from="1792563635323" duration="3827000" />
     </task>
     <servers />
   </component>
