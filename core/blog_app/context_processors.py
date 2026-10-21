@@ -1,6 +1,4 @@
-
 from django.db.models import Count, Q
-
 from blog_app.models import Category, Post
 
 

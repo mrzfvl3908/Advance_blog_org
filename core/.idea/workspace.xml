@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f24587ca-520f-4b20-80de-64a7594b8ff2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/blog_app/templates/blog_app/post_detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog_app/templates/blog_app/post_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog_app/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog_app/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog_app/context_processors.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog_app/context_processors.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +17,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Dockerfile" />
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -128,7 +123,9 @@
       <workItem from="1791821245989" duration="1278000" />
       <workItem from="1791830880758" duration="3000" />
       <workItem from="1791872283201" duration="8394000" />
-      <workItem from="1791958371287" duration="1409000" />
+      <workItem from="1791958371287" duration="8052000" />
+      <workItem from="1791977787685" duration="225000" />
+      <workItem from="1792474301764" duration="1461000" />
     </task>
     <servers />
   </component>
