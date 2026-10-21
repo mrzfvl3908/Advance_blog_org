@@ -1,6 +1,7 @@
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import get_object_or_404
-from django.views.generic import ListView, DetailView
-
+from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
+from .forms import PostForm
 from .models import Category, Post
 
 
@@ -58,3 +59,24 @@ class PostDetail(PublishedPostMixin, DetailView):
     template_name = "blog_app/post_detail.html"
     context_object_name = "post"
     slug_url_kwarg = "slug"
+
+
+class PostCreateView(LoginRequiredMixin, CreateView):
+    model = Post
+    form_class = PostForm
+    success_url = '/blog/post_list'
+
+    def form_valid(self, form):
+        form.instance.author = self.request.user.profile
+        return super().form_valid(form)
+
+
+class PostUpdateView(LoginRequiredMixin, UpdateView):
+    model = Post
+    form_class = PostForm
+    success_url = '/blog/post_list'
+
+
+class PostDeleteView(LoginRequiredMixin, DeleteView):
+    model = Post
+    success_url = '/blog/post_list/'
