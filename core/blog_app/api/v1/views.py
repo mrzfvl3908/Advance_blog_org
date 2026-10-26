@@ -6,3 +6,8 @@ from rest_framework.views import APIView
 @api_view(['GET', 'POST'])
 def postList(request):
     return Response('Ok')
+
+
+@api_view(['GET', 'POST'])
+def postDetail(request,id):
+    return Response(id)
