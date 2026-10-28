@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f24587ca-520f-4b20-80de-64a7594b8ff2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog_app/api/v1/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog_app/api/v1/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/posts/call-of-duty-vanguard-3840x2160-screenshot-gamescom-2021-4k-23561.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/header.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,7 +136,7 @@
       <workItem from="1793044364748" duration="589000" />
       <workItem from="1793079199447" duration="5612000" />
       <workItem from="1793086849714" duration="1020000" />
-      <workItem from="1793165380849" duration="1313000" />
+      <workItem from="1793165380849" duration="1700000" />
     </task>
     <servers />
   </component>
