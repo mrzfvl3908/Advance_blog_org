@@ -146,3 +146,10 @@ MAILERS = {
 
 # user manager config
 AUTH_USER_MODEL = 'accounts_app.User'
+
+# resr_framework settings
+# REST_FRAMEWORK = {
+#     'DEFAULT_PERMISSION_CLASSES': [
+#         'rest_framework.permissions.IsAuthenticated',
+#     ]
+# }
