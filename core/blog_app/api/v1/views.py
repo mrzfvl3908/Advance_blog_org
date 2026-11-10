@@ -96,6 +96,9 @@ class PostModelViewSet(viewsets.ModelViewSet):
     serializer_class = PostSerializer
     queryset = Post.objects.filter(status=True)
 
+    def perform_create(self, serializer):
+        serializer.save(author=self.request.user.profile) #=> برای گرفتن یوزر هستش و نیازی به انتخاب یوزر به صورت لیست منو نیست همونی که لاگین هس نمایش میده
+
 
 class CategoryModelViewSet(viewsets.ModelViewSet):
     permission_classes = (IsAuthenticatedOrReadOnly,)
