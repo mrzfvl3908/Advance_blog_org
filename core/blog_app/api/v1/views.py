@@ -7,6 +7,7 @@ from ...models import Post, Category
 from .serializers import PostSerializer, CategorySerializer
 from rest_framework import status, viewsets
 from django.shortcuts import get_object_or_404
+from .permissions import IsOwnerOrReadOnly
 
 # function api fbv
 """@api_view(['GET', 'POST'])
@@ -92,7 +93,7 @@ class PostDetail(RetrieveUpdateDestroyAPIView):
 
 
 class PostModelViewSet(viewsets.ModelViewSet):
-    permission_classes = (IsAuthenticatedOrReadOnly,)
+    permission_classes = [IsAuthenticatedOrReadOnly,IsOwnerOrReadOnly]
     serializer_class = PostSerializer
     queryset = Post.objects.filter(status=True)
 
@@ -101,6 +102,6 @@ class PostModelViewSet(viewsets.ModelViewSet):
 
 
 class CategoryModelViewSet(viewsets.ModelViewSet):
-    permission_classes = (IsAuthenticatedOrReadOnly,)
+    permission_classes = [IsAuthenticatedOrReadOnly,IsOwnerOrReadOnly]
     serializer_class = CategorySerializer
     queryset = Category.objects.all()
