@@ -10,6 +10,7 @@ from rest_framework import status, viewsets
 from django.shortcuts import get_object_or_404
 from .permissions import IsOwnerOrReadOnly
 from django_filters.rest_framework import DjangoFilterBackend
+from .paginations import DefaultPagination
 
 # function api fbv
 """@api_view(['GET', 'POST'])
@@ -102,6 +103,7 @@ class PostModelViewSet(viewsets.ModelViewSet):
     filterset_fields = ['status', 'category','title']
     search_fields = ['title','content']
     ordering_fields = ['published_date']
+    pagination_class = DefaultPagination
 
     def perform_create(self, serializer):
         serializer.save(author=self.request.user.profile) #=> برای گرفتن یوزر هستش و نیازی به انتخاب یوزر به صورت لیست منو نیست همونی که لاگین هس نمایش میده
