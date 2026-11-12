@@ -1,3 +1,4 @@
+from rest_framework.filters import SearchFilter, OrderingFilter
 from rest_framework.generics import ListAPIView, ListCreateAPIView, RetrieveUpdateDestroyAPIView
 from rest_framework.response import Response
 from rest_framework.decorators import api_view, permission_classes
@@ -8,6 +9,7 @@ from .serializers import PostSerializer, CategorySerializer
 from rest_framework import status, viewsets
 from django.shortcuts import get_object_or_404
 from .permissions import IsOwnerOrReadOnly
+from django_filters.rest_framework import DjangoFilterBackend
 
 # function api fbv
 """@api_view(['GET', 'POST'])
@@ -96,6 +98,10 @@ class PostModelViewSet(viewsets.ModelViewSet):
     permission_classes = [IsAuthenticatedOrReadOnly,IsOwnerOrReadOnly]
     serializer_class = PostSerializer
     queryset = Post.objects.filter(status=True)
+    filter_backends = [DjangoFilterBackend,SearchFilter,OrderingFilter]
+    filterset_fields = ['status', 'category','title']
+    search_fields = ['title','content']
+    ordering_fields = ['published_date']
 
     def perform_create(self, serializer):
         serializer.save(author=self.request.user.profile) #=> برای گرفتن یوزر هستش و نیازی به انتخاب یوزر به صورت لیست منو نیست همونی که لاگین هس نمایش میده
