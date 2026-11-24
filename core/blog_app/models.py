@@ -93,7 +93,7 @@ class Category(models.Model):
 
 class Post(models.Model):
     category = models.ForeignKey(
-        Category,
+        'Category',
         on_delete=models.PROTECT,
         related_name='posts',
     )
